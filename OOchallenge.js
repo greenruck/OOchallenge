@@ -10,9 +10,7 @@ class Vehicle {
     honk(){
         console.log('BEEP!');
     };
-    numWheels(){
-        console.log(4);
-    };
+ 
 }
 class Garage {
     constructor(capacity){
@@ -27,11 +25,19 @@ add(newVehicle){
         return "Sorry, we are full.";
     }
     this.vehicles.push(newVehicle);
-    return "Vehicle Added!";
+    return "Vehicle Added!"
 }
 }
-
 const myFirstVehicle = new Vehicle("Honda", "Monster Truck", 1999);
+
+class Car extends Vehicle{
+    constructor(make, model, year){
+        super(make, model, year);
+    }
+        numWheels(){
+        console.log(4);
+    };
+}
 
 class Motorcycle extends Vehicle{
     constructor(make, model, year){
